@@ -1,0 +1,591 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#top-bander {
+    width: 100%;
+    /* Chiều rộng 100% để phần tử nằm ngang toàn màn hình */
+    height: 50px;
+    /* Chiều cao của phần tử màu đỏ */
+    background-color: rgb(224, 5, 43);
+    /* Màu nền đỏ */
+    position: fixed;
+    /* Giữ vị trí cố định */
+    top: 0;
+    /* Đặt ở trên cùng của trang */
+    left: 0;
+    /* Đặt ở bên trái của trang */
+    z-index: 10;
+    /* Đảm bảo phần tử nằm trên các phần tử khác */
+    display: flex;
+    /* Sử dụng flexbox để căn giữa nội dung */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    padding: 0 20px;
+    /* Thêm khoảng cách bên trái và bên phải */
+}
+
+#logo img {
+    max-height: 50px;
+    /* Giới hạn chiều cao của logo để vừa với phần màu đỏ */
+    height: auto;
+    /* Để chiều cao tự động giữ tỉ lệ */
+    margin-right: 20px;
+    /* Khoảng cách giữa logo và menu */
+}
+
+.menu {
+    display: flex;
+    /* Sử dụng flexbox cho menu */
+    list-style: none;
+    /* Loại bỏ dấu đầu dòng */
+    padding: 0;
+    /* Xóa padding */
+    margin: 0;
+    /* Xóa margin */
+    font-variant: small-caps;
+    font-size: larger;
+}
+
+.menuli {
+    margin-right: 20px;
+    /* Khoảng cách giữa các mục menu */
+    display: flex;
+    /* Sử dụng flexbox cho các mục trong menu */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+}
+
+.menu li span {
+    color: white;
+    margin: 8px;
+}
+
+.menu a {
+    color: white;
+    /* Màu chữ */
+    text-decoration: none;
+    /* Bỏ gạch chân */
+    font-size: 18px;
+    /* Kích thước chữ */
+    text-transform: lowercase;
+    /* Chữ thường (small caps) */
+    transition: color 0.3s ease;
+    /* Hiệu ứng chuyển màu khi di chuột */
+}
+
+.menuli :hover {
+    background-color: rgb(245, 57, 89);
+    border-radius: 12px;
+    height: 100%;
+    text-decoration: none;
+    /* Dấu gạch chân khi rê chuột */
+}
+
+
+.menu input {
+    height: 20px;
+    /* Chiều cao cho ô tìm kiếm */
+    margin-right: 10px;
+    /* Khoảng cách giữa ô tìm kiếm và nút tìm */
+    border-radius: 8px;
+    /* Bo góc cho ô tìm kiếm */
+    border: 1px solid #ccc;
+    /* Đường viền cho ô tìm kiếm */
+    padding: 5px;
+    /* Thêm khoảng cách bên trong */
+}
+
+
+.container {
+    width: 1275px;
+    /* Chiều rộng tối đa */
+    margin: 0 auto;
+    /* Căn giữa */
+    color: rebeccapurple;
+    height: 100%;
+    /* Chiều cao của phần tử màu xanh */
+    position: relative;
+    /* Đặt vị trí tương đối */
+    margin-top: 70px;
+    /* Đảm bảo nội dung không bị che khuất bởi phần màu đỏ */
+    display: flex;
+    /* Sử dụng Flexbox để căn giữa các khối */
+    align-items: flex-start;
+    /* Căn lề bên trái cho nav và header */
+
+}
+
+nav {
+    width: 60%;
+    /* Chiều rộng của khối nav */
+    height: 400px;
+    /* Chiều cao của khối nav */
+
+    margin-right: 15px;
+    /* Khoảng cách giữa khối nav và header */
+    margin-left: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px gray;
+}
+
+nav img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px
+}
+
+header {
+    width: 20%;
+    /* Chiều rộng của khối header */
+    height: 382px;
+    /* Chiều cao của khối header */
+    background-color: white;
+    /* Màu nền khối header */
+    border-radius: 15px;
+    box-shadow: 0 0 15px gray;
+    padding: 10px 0;
+}
+
+
+.column-container {
+    display: flex;
+    flex-direction: column;
+    /* Xếp các khối theo chiều dọc */
+    gap: 10px;
+    /* Tạo khoảng cách đều 10px giữa các khối */
+    width: 30%;
+    /* Đảm bảo chiều rộng của cột */
+}
+
+article,
+#anh2,
+#anh3 {
+    width: 100%;
+    /* Các khối chiếm toàn bộ chiều rộng của .column-container */
+    height: 126.5px;
+    /* Giữ chiều cao của mỗi khối */
+    background-color: yellow;
+    border-radius: 15px;
+    box-shadow: 0 0 10px gray;
+}
+
+#anh3 img {
+    width: 100%;
+    height: 126.5px;
+    border-radius: 15px;
+}
+
+#anh2 img {
+    width: 100%;
+    height: 126.5px;
+    border-radius: 15px;
+}
+
+article img {
+    width: 100%;
+    height: 126.5px;
+    border-radius: 15px;
+}
+
+
+
+
+header ul {
+    list-style: none;
+    /* Xóa dấu đầu dòng */
+    padding: 0;
+    /* Xóa khoảng cách padding mặc định */
+    margin: 0;
+    /* Xóa khoảng cách margin mặc định */
+    display: flex;
+    /* Sử dụng flexbox cho toàn bộ danh sách */
+    flex-direction: column;
+    /* Xếp các mục theo chiều dọc */
+    align-items: flex-start;
+    /* Căn trái các mục theo chiều ngang */
+    padding-left: 10px;
+    /* Cách mép bên trái 5px */
+}
+
+header ul li {
+    margin: 10px 0;
+    /* Khoảng cách giữa các mục */
+}
+
+header ul li a {
+    font-size: 15px;
+    /* Kích thước chữ */
+    text-decoration: none;
+    /* Bỏ gạch chân */
+    color: black;
+    /* Màu chữ */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header ul li a:hover {
+    text-decoration: none;
+    /* Gạch chân khi di chuột */
+    color: red;
+    /* Màu vàng khi rê chuột */
+}
+
+header ul li a:active {
+    color: cornflowerblue;
+}
+
+aside {
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    margin-top: 410px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px gray;
+}
+
+aside img {
+    width: 100%;
+    height: 70px;
+    border-radius: 15px;
+}
+
+.hot-sale {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    background-color: rgb(248, 63, 94);
+    border-radius: 20px;
+    box-shadow: 0 0 10px gray;
+}
+
+.hot-sale h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.hot-sale ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hot-sale li {
+    display: flex;
+    /* Sử dụng flexbox để căn chỉnh các phần tử bên trong */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    margin: 10px 0;
+    /* Khoảng cách giữa các sản phẩm */
+}
+
+.slider-product-one-content {
+    background: linear-gradient(rgb(248, 62, 96), rgb(254, 80, 72)) 0% 0% / cover;
+    padding: 12px;
+    border-radius: 15px;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 0 15px gray;
+}
+
+.h2sale {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+
+.h2sale span {
+    margin-top: 36px;
+    margin-right: 6px;
+}
+
+.bling {
+    margin-left: 10px;
+}
+
+.slider-product-one-content .bling {
+    animation: colorBackground 0.5s infinite;
+    -webkit-animation: colorBackground 0.5s infinite;
+    -moz-animation: colorBackground 0.5s infinite;
+    -o-animation: colorBackground 0.5s infinite
+}
+
+@keyframes colorBackground {
+    0% {
+        color: white;
+    }
+
+    50% {
+        color: rgb(226, 11, 29);
+    }
+}
+
+.title {
+    margin: 10px;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.product-item-saleoff {
+    z-index: 1000;
+    display: block;
+    flex-direction: column;
+    gap: 0px;
+    background-color: white;
+    flex-wrap: wrap;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px;
+    width: 220px;
+    height: 420px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item {
+    z-index: 1000;
+    display: block;
+    flex-direction: column;
+    gap: 0px;
+    background-color: white;
+    flex-wrap: wrap;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px;
+    width: 220px;
+    height: 490px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.divSaleOff {
+
+    display: flex;
+    flex-direction: row;
+    grid-gap: 20px;
+    width: 100%;
+    height: 30px;
+    margin-top: -11px;
+    z-index: 1;
+}
+
+.tragop {
+    display: flex;
+    text-align: center;
+    border: 1px solid rgb(40, 82, 251);
+    background-color: white;
+    border-radius: 4px;
+    height: 20px;
+    width: 60px;
+    margin-left: 80px;
+    margin-right: -11px;
+}
+
+.tragop p {
+    margin: auto;
+    color: rgb(40, 82, 251);
+    font-size: 10px;
+}
+
+.SaleOff {
+    display: flex;
+    text-align: center;
+    border: 1px solid #d70018;
+    background-color: #d70018;
+    border-radius: 8px 20px 20px 0px;
+    height: px;
+    width: 80px;
+    margin-left: -11px;
+}
+
+.SaleOff p {
+    font-weight: bold;
+    margin: auto;
+    color: white;
+    font-size: 12px;
+}
+
+.atention {
+    display: flex;
+
+    width: 100%;
+    height: 41px;
+}
+
+.atention div {
+    border: 1px solid rgb(215, 215, 216);
+    background-color: #e0e1e3;
+    text-align: justify;
+    font-size: 11px;
+    color: #444444;
+    border-radius: 12px;
+    width: 100%;
+    height: 41px;
+}
+
+.atention p {
+    margin: 10px;
+}
+
+.product-list a {
+    text-decoration: none
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+.product-item-saleoff img {
+    width: 100%;
+    height: auto;
+}
+
+.product-title {
+    display: flex;
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+    margin: 10px 0;
+}
+
+.product-price {
+    display: flex;
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(238, 3, 3);
+    margin: 10px 0;
+}
+
+.product-price-befor {
+    display: flex;
+    font-size: 1em;
+    text-decoration: line-through;
+    color: rgb(121, 120, 120);
+    margin: 8px 4px;
+    font-weight: bold;
+}
+
+.product-memberSaleOff {
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    font-size: 12px;
+    color: black;
+    column-gap: 0;
+}
+
+.product-memberSaleOff div {
+    display: flex;
+    height: 25px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.divRating {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 20px;
+    width: 100%;
+    height: 50px;
+
+}
+
+.start {
+    display: flex;
+    margin: 20px 0px;
+    width: 60%;
+    color: #ddd;
+}
+
+.start .checked {
+    color: orange;
+}
+
+.divlove {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+    gap: 10px;
+}
+
+.divlove p {
+    font-size: 12px;
+    color: rgb(121, 120, 120);
+}
+
+.divlove span {
+    margin-top: 8px;
+    font-size: 18px;
+    color: red;
+}
+
+.container-item {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 1275px;
+    /* Chiều rộng tối đa */
+    margin: 0 auto;
+    /* Căn giữa */
+    color: rebeccapurple;
+    height: 100%;
+    /* Chiều cao của phần tử màu xanh */
+    position: relative;
+    /* Đặt vị trí tương đối */
+    margin-top: 20px;
+    /* Đảm bảo nội dung không bị che khuất bởi phần màu đỏ */
+    align-items: flex-start;
+    /* Căn lề bên trái cho nav và header */
+}
+
+.Footer {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* Chiều rộng 100% để phần tử nằm ngang toàn màn hình */
+    height: 100px;
+    /* Chiều cao của phần tử màu đỏ */
+    background-color: #ddd;
+    /* Màu nền đỏ */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    /* Sử dụng flexbox để căn giữa nội dung */
+
+}
+
+.Footer p {
+    display: flex;
+    text-align: center;
+}
+
+.Footer H {
+    display: flex;
+    font-style: italic;
+    font-size: 10PX;
+}
